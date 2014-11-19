@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>"Exo"</title>
+        <meta charset="UTF-8">
+        <script language="javascript" type="text/javascript">
+
+            tab_pays = new Array(
+                    ["Allemagne", 11],
+                    ["Belgique", 12],
+                    ["Espagne", 14],
+                    ["France", 10],
+                    ["Italie", 13],
+                    ["Angleterre", 15]
+                    );
+                    coul = new Array("#FFFFCC", "#CCFFFF");
+            aff_tab = aff_liste = "";
+            for (i = 0; i < tab_pays.length; i++) 
+            {
+//                console.log(tab_pays[i])
+                aff_tab += "<tr bgcolor=\""+coul[i % 2] + "\">" +
+                    "<td>"+tab_pays[i][0]+"< /td>"+
+                    "<td>"+tab_pays[i][1]+"< /td>"+
+                    "< /tr>";
+            aff_liste+="<option value=\""+tab_pays[i][1]+"\">"+
+                    tab_pays[i][0]+
+                    "< /option>";
+        }
+
+        </script>
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Nos frais de port</h1>
+        <table border="1" cellspacing="0">
+            <tr>
+                <td>Pays</td>
+                <td>Frais</td>
+            </tr>
+            
+            <script language="javascript" type="text/javascript">
+                 document.write(aff_tab);
+                 </script>
+        </table>
+        <h2>Choisissez votre pays</h2>
+        <form>
+            Pays :
+            <select name="fdp">
+                <option value="">Choississez votre pays</option>
+               <script language="javascript" type="text/javascript">
+                           document.write(aff_liste);
+                                      </script>
+            </select>
+            <input type="submit" value="Pays"/>
+        </form>
+        <div>Exercice 2</div>
+    </body>
+</html>
